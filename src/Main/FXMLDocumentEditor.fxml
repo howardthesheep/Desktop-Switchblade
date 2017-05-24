@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.DocumentEditorController">
+   <children>
+      <HBox prefHeight="34.0" prefWidth="800.0">
+         <children>
+            <MenuBar prefHeight="34.0" prefWidth="804.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openAction" text="Open" />
+                    <MenuItem mnemonicParsing="false" onAction="#saveAction" text="Save" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Programs">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Text Editor" />
+                        <MenuItem mnemonicParsing="false" onAction="#musicSwitch" text="Music Player" />
+                        <MenuItem mnemonicParsing="false" onAction="#photoSwitch" text="Photo Viewer" />
+                        <MenuItem mnemonicParsing="false" onAction="#videoSwitch" text="Video Player" />
+                        <MenuItem mnemonicParsing="false" onAction="#browserSwitch" text="Browser" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#aboutSwitch" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+      <SplitPane dividerPositions="0.07963446475195822" layoutX="-2.0" layoutY="34.0" orientation="VERTICAL" prefHeight="768.0" prefWidth="800.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="70.0" prefWidth="798.0">
+               <children>
+                  <TextField fx:id="textField" alignment="TOP_CENTER" layoutX="209.0" layoutY="14.0" prefHeight="25.0" prefWidth="381.0" />
+                  <Label layoutX="179.0" layoutY="18.0" text="Title" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <HTMLEditor fx:id="htmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" prefHeight="750.0" prefWidth="798.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

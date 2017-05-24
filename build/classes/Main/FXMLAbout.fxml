@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.AboutController">
+   <children>
+      <HBox prefHeight="34.0" prefWidth="800.0">
+         <children>
+            <MenuBar prefHeight="34.0" prefWidth="804.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openAction" text="Open" />
+                    <MenuItem mnemonicParsing="false" onAction="#saveAction" text="Save" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Programs">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#editorSwitch" text="Text Editor" />
+                        <MenuItem mnemonicParsing="false" onAction="#musicSwitch" text="Music Player" />
+                        <MenuItem mnemonicParsing="false" onAction="#photoSwitch" text="Photo Viewer" />
+                        <MenuItem mnemonicParsing="false" onAction="#videoSwitch" text="Video Player" />
+                        <MenuItem mnemonicParsing="false" text="Browser" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+      <WebView fx:id="wv" layoutY="34.0" prefHeight="766.0" />
+   </children>
+</AnchorPane>

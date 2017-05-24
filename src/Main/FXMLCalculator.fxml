@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="795.0" prefWidth="343.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.CalculatorController">
+   <children>
+      <HBox layoutY="2.0" prefHeight="25.0" prefWidth="405.0">
+         <children>
+            <MenuBar prefHeight="25.0" prefWidth="686.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Programs">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#editorSwitch" text="Text Editor" />
+                        <MenuItem mnemonicParsing="false" onAction="#musicSwitch" text="Music Player" />
+                        <MenuItem mnemonicParsing="false" onAction="#photoSwitch" text="Photo Editor" />
+                        <MenuItem mnemonicParsing="false" text="Calculator" />
+                        <MenuItem mnemonicParsing="false" onAction="#videoSwitch" text="Video Player" />
+                        <MenuItem mnemonicParsing="false" onAction="#browserSwitch" text="Browser" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+      <GridPane layoutX="4.0" layoutY="299.0" prefHeight="496.0" prefWidth="401.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#clearAction" scaleX="1.25" scaleY="1.25" text="C" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="49.0" layoutY="39.0" mnemonicParsing="false" onAction="#parenthesisAction" scaleX="1.25" scaleY="1.25" text="()" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="49.0" layoutY="39.0" mnemonicParsing="false" onAction="#moduloAction" scaleX="1.25" scaleY="1.25" text="\%" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="49.0" layoutY="39.0" mnemonicParsing="false" onAction="#divisionAction" scaleX="1.25" scaleY="1.25" text="/" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="49.0" layoutY="39.0" mnemonicParsing="false" onAction="#sevenAction" scaleX="1.25" scaleY="1.25" text="7" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="10.0" layoutY="122.0" mnemonicParsing="false" onAction="#eightAction" scaleX="1.25" scaleY="1.25" text="8" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="211.0" layoutY="39.0" mnemonicParsing="false" onAction="#nineAction" scaleX="1.25" scaleY="1.25" text="9" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="111.0" layoutY="39.0" mnemonicParsing="false" onAction="#multiplyAction" scaleX="1.25" scaleY="1.25" text="x" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="311.0" layoutY="39.0" mnemonicParsing="false" onAction="#fourAction" scaleX="1.25" scaleY="1.25" text="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="49.0" layoutY="39.0" mnemonicParsing="false" onAction="#fiveAction" scaleX="1.25" scaleY="1.25" text="5" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#sixAction" scaleX="1.25" scaleY="1.25" text="6" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="10.0" layoutY="122.0" mnemonicParsing="false" onAction="#oneAction" scaleX="1.25" scaleY="1.25" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="211.0" layoutY="39.0" mnemonicParsing="false" onAction="#twoAction" scaleX="1.25" scaleY="1.25" text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="311.0" layoutY="122.0" mnemonicParsing="false" onAction="#threeAction" scaleX="1.25" scaleY="1.25" text="3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="111.0" layoutY="39.0" mnemonicParsing="false" onAction="#additionAction" scaleX="1.25" scaleY="1.25" text="+" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="111.0" layoutY="122.0" mnemonicParsing="false" onAction="#negAction" scaleX="1.25" scaleY="1.25" text="+/-" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="311.0" layoutY="39.0" mnemonicParsing="false" onAction="#zeroAction" scaleX="1.25" scaleY="1.25" text="0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="10.0" layoutY="205.0" mnemonicParsing="false" onAction="#decimalAction" scaleX="1.25" scaleY="1.25" text="." GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="211.0" layoutY="122.0" mnemonicParsing="false" onAction="#equalsAction" scaleX="1.25" scaleY="1.25" text="=" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="49.0" layoutY="39.0" mnemonicParsing="false" onAction="#minusAction" scaleX="1.25" scaleY="1.25" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#backspaceAction" scaleX="1.25" scaleY="1.25" text="←" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </GridPane>
+      <Label fx:id="output" alignment="BOTTOM_RIGHT" layoutY="27.0" prefHeight="251.0" prefWidth="405.0">
+         <font>
+            <Font size="28.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
